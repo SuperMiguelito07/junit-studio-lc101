@@ -1,6 +1,4 @@
 package main;
-
-
 public class BalancedBrackets {
     /**
      * The function BalancedBrackets should return true if and only if
@@ -27,6 +25,9 @@ public class BalancedBrackets {
             if (ch == '[') {
                 brackets++;
             } else if (ch == ']') {
+                if (brackets == 0) {
+                    return false;
+                }
                 brackets--;
             }
         }
